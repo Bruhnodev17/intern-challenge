@@ -77,13 +77,17 @@ Certifique-se de seguir essas orientações ao criar e entregar seu projeto. Boa
 
   <img width="371" alt="Captura de Tela 2024-04-09 às 14 12 16" src="https://github.com/Bruhnodev17/intern-challenge/assets/150696467/aaa69463-57f8-4fc5-bc62-a24b9b9b0889">
 
-Quando conseguir navegar entre as tabelas, vá até o caminho especificado abaixo (Tables):<br>
+Quando conseguir navegar entre as tabelas, vá até o caminho especificado abaixo (Tables/produto):<br>
 
-<img width="1280" alt="Captura de Tela 2024-04-09 às 14 09 19" src="https://github.com/Bruhnodev17/intern-challenge/assets/150696467/0c6d8670-9113-4e6f-937d-7ec296b5853b"> <br>
+<img width="364" alt="Captura de Tela 2024-04-09 às 15 37 24" src="https://github.com/Bruhnodev17/intern-challenge/assets/150696467/1c5ea32d-77b4-4a8f-975f-97eaadf01ad6">
+ <br></br>
 
   Navegue até a tabela de produtos conforme abaixo e crie as tabelas para vê-las de forma dinâmica em seu banco de dados!
 
   <img width="1280" alt="Captura de Tela 2024-04-09 às 14 18 28" src="https://github.com/Bruhnodev17/intern-challenge/assets/150696467/1c36cd4d-d567-478a-bcdd-43a384d88a0c">
+  <br></br>
+
+  Pronto! agora você consegue persistir de forma dinâmica, os seus produtos, na interface(frontend), no backend(API RESTFULL) e no banco de dados(POSTGRESSQL), criando, deletando, editando e persistindo suas propriedades criadas como quiser!
 
 
 Feito por: https://github.com/Bruhnodev17
