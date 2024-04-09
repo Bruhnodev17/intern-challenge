@@ -1,0 +1,69 @@
+<div>
+  <div class="container mt-5">
+    <div class="card ">
+      <div class="card-header">
+        <h4>Product Edit
+          <a routerLink="/products" class="btn btn-danger float-end">Back</a>
+        </h4>
+      </div>
+      <div class="card-body">
+
+        <div *ngIf="isLoading; else elseForm">
+          <app-loader :title="loadingTitle"/>
+        </div>
+
+        <ng-template #elseForm>
+          <form (ngSubmit)="updateProduct()">
+            <div *ngIf="product">
+
+            <div class="mb-3">
+              <label>Name</label>
+              <input type="text" [(ngModel)]="product.name" name="name" class="form-control"/>
+            </div>
+
+            <span *ngIf="errors" class="text-danger">{{errors.name}}</span>
+
+            <div class="mb-3">
+              <label>Price</label>
+              <input type="text" [(ngModel)]="product.price" name="price" class="form-control"/>
+            </div>
+
+            <span *ngIf="errors" class="text-danger">{{errors.price}}</span>
+
+            <div class="mb-3">
+              <label>Validity</label>
+              <input type="date" [(ngModel)]="product.validity" name="validity" class="form-control"/>
+            </div>
+
+            <span *ngIf="errors" class="text-danger">{{errors.validity}}</span>
+
+            <div class="mb-3">
+              <label>Perishable</label>
+
+              <select class="form-control" [(ngModel)]="perishable" name="perishable">
+                <option value={{true}}>Sim</option>
+                <option value={{false}}>Não</option>
+              </select>
+            </div>
+
+            <span *ngIf="errors" class="text-danger">{{errors.perishable}}</span>
+
+            <div class="mb-3">
+              <label>Stock</label>
+              <input type="text" [(ngModel)]="product.stock" name="stock" class="form-control"/>
+            </div>
+
+            <span *ngIf="errors" class="text-danger">{{errors.stock}}</span>
+          </div>
+
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+          </form>
+        </ng-template>
+
+
+      </div>
+    </div>
+  </div>
+</div>

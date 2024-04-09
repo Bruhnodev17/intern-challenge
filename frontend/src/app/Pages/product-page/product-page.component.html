@@ -1,0 +1,51 @@
+<div>
+  <div class="mt-5 container">
+    <div class="card">
+      <div class="card-header">
+        <h4>
+          <a routerLink="/product/create" class="btn btn-primary float-end"
+            >Add Product</a
+          >
+        </h4>
+      </div>
+      <div class="card-body">
+        <div *ngIf="isLoading; else elseTableLock">
+          <app-loader />
+        </div>
+
+        <ng-template #elseTableLock>
+          <table class="table tabl-striped table-bordered table-responsive">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Validity</th>
+                <th>Perishable</th>
+                <th>Stock</th>
+                <th>Created at</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of this.products">
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>R$ {{ item.price | currency:'BRL':'symbol':'1.2-2' }}</td>
+                <td> {{ maskDate(item.validity) }} </td>
+                <td>{{ item.perishable }}</td>
+                <td>{{ item.stock | number }}</td>
+                <td>{{ item.created_at | date:'dd/MM/yyyy HH:mm' }}</td>
+
+                <td>
+                  <a routerLink="/products/{{item.id}}/edit"  class="btn btn-success mx-2 ">Edit</a>
+                  <button type="button" (click)="destroyProduct($event, item.id)" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
